@@ -16,8 +16,8 @@ After completing this lesson, you will be able to:
 
 You will be better equipped to work through this lesson if you have:
 
-*   Basic knowledge of HTML and [CSS](https://make.wordpress.org/training/handbook/theme-school/intro-to-css/)
-*   Basic knowledge of [installing and activating WordPress themes](https://make.wordpress.org/training/handbook/user-lessons/choosing-and-installing-a-theme/)
+*   Basic knowledge of HTML and [CSS](https://make.wordpress.org/training/handbook/lesson-plans/theme-school/intro-to-css/)
+*   Basic knowledge of [installing and activating WordPress themes](https://make.wordpress.org/training/handbook/lesson-plans/user-lessons/choosing-and-installing-a-theme/)
 *   Understanding of how folders and files are structured
 *   Ability to edit files with a text editor
 
@@ -222,7 +222,25 @@ For example, let's take the default Author Hierarchy:
 *   author-{id}.php
 *   author.php
 
-To add author-{role}.php before author.php we can manipulate the actual hierarchy using the 'author_template' hook. This allows a request for /author/username where username has the role of editor to display using author-editor.php if present in the current themes directory. [php] function author_role_template( $templates='' ) { $author = get_queried_object(); $role=$author->roles[0]; if(!is_array($templates) &amp;&amp; !empty($templates)) { $templates=locate_template(array("author-$role.php",$templates),false); } elseif(empty($templates)) { $templates=locate_template("author-$role.php",false); } else { $new_template=locate_template(array("author-$role.php")); if(!empty($new_template)) array_unshift($templates,$new_template); } return $templates; } add_filter( 'author_template', 'author_role_template' ); [/php]
+To add author-{role}.php before author.php we can manipulate the actual hierarchy using the 'author_template' hook. This allows a request for /author/username where username has the role of editor to display using author-editor.php if present in the current themes directory.
+
+```PHP
+function author_role_template( $templates='' ) {
+	$author = get_queried_object();
+	$role = $author->roles[0];
+	if( !is_array( $templates ) && !empty( $templates ) ) {
+		$templates = locate_template( array( "author-$role.php", $templates ), false );
+	} elseif( empty( $templates ) ) {
+		$templates = locate_template( "author-$role.php", false );
+	} else {
+		$new_template = locate_template( array( "author-$role.php" ) );
+		if( !empty( $new_template ) ) 
+			array_unshift( $templates, $new_template );
+	}
+	return $templates;
+}
+add_filter( 'author_template', 'author_role_template' );
+```
 
 ## Exercises
 
@@ -234,34 +252,30 @@ To add author-{role}.php before author.php we can manipulate the actual hierarch
 
 ## Quiz
 
-**A. Which template is not used when the site's front page is accessed?**
+**Which template is not used when the site's front page is accessed?**
 
 1.  index.php
 2.  front-page.php
 3.  home.php
 4.  single.php
 
-**Answer:**4\. single.php
+**Answer:** 4. single.php
 
-* * *
-
-**B. Can you customize the archive output from a custom post type?**
+**Can you customize the archive output from a custom post type?**
 
 1.  Yes
 2.  No
 
-**Answer:** 1\. Yes
+**Answer:** 1. Yes
 
-* * *
-
-**C. Which template is the last instance for fallback?**
+**Which template is the last instance for fallback?**
 
 1.  home.php
 2.  single.php
 3.  index.php
 4.  archive.php
 
-**Answer:** 3\. index.php
+**Answer:** 3. index.php
 
 ## Additional Resources
 
