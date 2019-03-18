@@ -86,7 +86,9 @@ With the exception of the basic index.php template file, you can choose whether 
 
 ### Visual Overview
 
-The following diagram shows which template files are called to generate a WordPress page based on the WordPress Template Hierarchy. [caption id="attachment_822" align="alignnone" width="632"][![Template Hierarchy Chart](http://make.wordpress.org/training/files/2014/09/template-hierarchy-retina-light-1024x640.jpg)](http://make.wordpress.org/training/files/2014/09/template-hierarchy-retina-light.jpg) Template Hierarchy Chart[/caption] [Interactive Diagram of the WordPress Template Hierarchy](http://wphierarchy.com/)
+The following diagram shows which template files are called to generate a WordPress page based on the WordPress Template Hierarchy. [caption id="attachment_822" align="alignnone" width="632"]
+[![Template Hierarchy Chart](/images/Settings.png)](/images/Settings.png) Template Hierarchy Chart[/caption] 
+[Interactive Diagram of the WordPress Template Hierarchy](http://wphierarchy.com/)
 
 ### Examples
 
