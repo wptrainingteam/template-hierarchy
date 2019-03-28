@@ -1,4 +1,4 @@
-# Template Heirarchy
+# Template Hierarchy
 
 ## Description
 
