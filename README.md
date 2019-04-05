@@ -23,9 +23,9 @@ You will be better equipped to work through this lesson if you have:
 
 ## Assets
 
-*   [Twenty Fourteen Theme](http://wordpress.org/themes/twentyfourteen "Twenty Fourteen Theme")
-*   [Template Hierarchy Chart](http://codex.wordpress.org/File:Template_Hierarchy.png) (.png)
-*   [Interactive Diagram of the WordPress Template Hierarchy](http://wphierarchy.com/)
+*   [Twenty Fourteen Theme](https://wordpress.org/themes/twentyfourteen "Twenty Fourteen Theme")
+*   [Template Hierarchy Chart](https://codex.wordpress.org/File:Template_Hierarchy.png) (.png)
+*   [Interactive Diagram of the WordPress Template Hierarchy](https://wphierarchy.com/)
 
 ## Screening Questions
 
@@ -38,7 +38,7 @@ You will be better equipped to work through this lesson if you have:
 ## Teacher Notes
 
 *   Performing a live demo while teaching the steps to create WordPress Templates is crucial to having the material “click” for students.
-*   It is easiest for students to work on a locally installed copy of WordPress. Set some time aside before class to help students with installing WordPress locally if they need it. For more information on how to install WordPress locally, please visit our [Teacher Resources page](http://make.wordpress.org/training/teacher-resources/).
+*   It is easiest for students to work on a locally installed copy of WordPress. Set some time aside before class to help students with installing WordPress locally if they need it. For more information on how to install WordPress locally, please visit our [Teacher Resources page](https://make.wordpress.org/training/teacher-resources/).
 *   The preferred answers to the screening questions are “yes.” If students reply “no” to all 5 questions they may not be ready for this lesson.
 
 ## Hands-on walk-through
@@ -68,13 +68,13 @@ The #1 Rule of WordPress development is to **never change WordPress files.** **
 *   Use a starter theme or create your own one from scratch.
 *   Create a **Child Theme** that is a “**child**” of another theme (the Parent Theme).
 
-*Exception: starter themes that have been intentionally created by theme builders for you to modify
+* Exception: starter themes that have been intentionally created by theme builders for you to modify
 
 * * *
 
 ### How WordPress selects templates to generate web pages
 
-WordPress uses the [Query String](http://codex.wordpress.org/Glossary#Query_String "Glossary") to decide which template or set of templates should be used to display the page. The query string in your URI comes after the initial question mark and may contain a number of parameters separated by ampersands. Simply put, WordPress searches down through the Template Hierarchy until it finds a matching template file. To decide which template file to use, WordPress:
+WordPress uses the [Query String](https://codex.wordpress.org/Glossary#Query_String "Glossary") to decide which template or set of templates should be used to display the page. The query string in your URI comes after the initial question mark and may contain a number of parameters separated by ampersands. Simply put, WordPress searches down through the Template Hierarchy until it finds a matching template file. To decide which template file to use, WordPress:
 
 1.  matches every query string to a query type to decide which page is being requested (such as, a search page, a category page, etc.)
 2.  selects the template in the order determined by the Template Hierarchy
@@ -86,9 +86,12 @@ With the exception of the basic index.php template file, you can choose whether 
 
 ### Visual Overview
 
-The following diagram shows which template files are called to generate a WordPress page based on the WordPress Template Hierarchy. [caption id="attachment_822" align="alignnone" width="632"]
-[![Template Hierarchy Chart](/images/Template_Hierarchy.png)](/images/Template_Hierarchy.png) Template Hierarchy Chart[/caption] 
-[Interactive Diagram of the WordPress Template Hierarchy](http://wphierarchy.com/)
+The following diagram shows which template files are called to generate a WordPress page based on the WordPress Template Hierarchy.
+
+[![Template Hierarchy Chart](/images/Template_Hierarchy.png)](/images/Template_Hierarchy.png)
+Template Hierarchy Chart
+
+[Interactive Diagram of the WordPress Template Hierarchy](https://wphierarchy.com/)
 
 ### Examples
 
@@ -109,19 +112,19 @@ In this section we'll take a look at the Template Hierarchy in detail, and learn
 
 **Front Page Display** This template file is used to render the Site Front Page, whether the front page displays the Blog Posts Index or a static page. The Front Page template takes precedence over the Blog Posts Index (Home) template.
 
-1.  front-page.php - Used for both **your latest posts** or **a static page** as set in the **front page displays** section of [Settings](http://codex.wordpress.org/Administration_Panels#Reading "Administration Panels") -> [Reading](http://codex.wordpress.org/Settings_Reading_SubPanel "Settings Reading SubPanel")
-2.  The [Page display](http://codex.wordpress.org/Template_Hierarchy#Page_display) is used when the **front page** is set in the **front page displays** section of [Settings](http://codex.wordpress.org/Administration_Panels#Reading "Administration Panels") -> [Reading](http://codex.wordpress.org/Settings_Reading_SubPanel "Settings Reading SubPanel")
-3.  The [Home Page display](http://codex.wordpress.org/Template_Hierarchy#Home_Page_display) is used when the **posts page** is set in the **Front page displays** section of [Settings](http://codex.wordpress.org/Administration_Panels#Reading "Administration Panels") -> [Reading](http://codex.wordpress.org/Settings_Reading_SubPanel "Settings Reading SubPanel")
+1.  front-page.php - Used for both **your latest posts** or **a static page** as set in the **front page displays** section of [Settings](https://codex.wordpress.org/Administration_Panels#Reading "Administration Panels") -> [Reading](https://codex.wordpress.org/Settings_Reading_SubPanel "Settings Reading SubPanel")
+2.  The [Page display](https://codex.wordpress.org/Template_Hierarchy#Page_display) is used when the **front page** is set in the **front page displays** section of [Settings](https://codex.wordpress.org/Administration_Panels#Reading "Administration Panels") -> [Reading](https://codex.wordpress.org/Settings_Reading_SubPanel "Settings Reading SubPanel")
+3.  The [Home Page display](https://codex.wordpress.org/Template_Hierarchy#Home_Page_display) is used when the **posts page** is set in the **Front page displays** section of [Settings](https://codex.wordpress.org/Administration_Panels#Reading "Administration Panels") -> [Reading](https://codex.wordpress.org/Settings_Reading_SubPanel "Settings Reading SubPanel")
 
 **Single Post Display** This template file is used to render a single post page.
 
-1.  single-{post_type}.php - If the [post type](http://codex.wordpress.org/Post_Types "Post Types") is "product", WordPress will look for single-product.php.
+1.  single-{post_type}.php - If the [post type](https://codex.wordpress.org/Post_Types "Post Types") is "product", WordPress will look for single-product.php.
 2.  single.php
 3.  index.php
 
 **Page Display** This template file is used to render a static page ("page" post-type).
 
-1.  custom template file - The [Page Template](http://codex.wordpress.org/Page_Templates "Page Templates") assigned to the page. See [get_page_templates()](http://codex.wordpress.org/Class_Reference/WP_Theme#Get_Custom_Page_Templates "Class Reference/WP Theme").
+1.  custom template file - The [Page Template](https://codex.wordpress.org/Page_Templates "Page Templates") assigned to the page. See [get_page_templates()](https://codex.wordpress.org/Class_Reference/WP_Theme#Get_Custom_Page_Templates "Class Reference/WP Theme").
 2.  page-{slug}.php - If the page slug is **recent-news**, WordPress will look for page-recent-news.php
 3.  page-{id}.php - If the page ID is "6", WordPress will look for page-6.php
 4.  page.php
@@ -143,7 +146,7 @@ In this section we'll take a look at the Template Hierarchy in detail, and learn
 4.  archive.php
 5.  index.php
 
-**Custom Taxonomies Display** This template file is used to render the Archive Index page for a [Custom Taxonomy](http://codex.wordpress.org/Taxonomies "Taxonomies")
+**Custom Taxonomies Display** This template file is used to render the Archive Index page for a [Custom Taxonomy](https://codex.wordpress.org/Taxonomies "Taxonomies")
 
 1.  taxonomy-{taxonomy}-{term}.php - If the taxonomy is "sometax", and taxonomy's term is "someterm" WordPress will look for taxonomy-sometax-someterm.php. In the case of Post Formats, the taxonomy is 'post_format' and the terms are 'post-format-{format}. i.e. taxonomy-post_format-post-format-link.php
 2.  taxonomy-{taxonomy}.php - If the taxonomy is "sometax", WordPress will look for taxonomy-sometax.php
@@ -151,9 +154,9 @@ In this section we'll take a look at the Template Hierarchy in detail, and learn
 4.  archive.php
 5.  index.php
 
-**Custom Post Types Display** This Template file is used to render the Archive Index page for a [Custom Post Types](http://codex.wordpress.org/Post_Types "Post Types")
+**Custom Post Types Display** This Template file is used to render the Archive Index page for a [Custom Post Types](https://codex.wordpress.org/Post_Types "Post Types")
 
-1.  archive-{post_type}.php - If the [post type](http://codex.wordpress.org/Post_Types "Post Types") is "product", WordPress will look for archive-product.php.
+1.  archive-{post_type}.php - If the [post type](https://codex.wordpress.org/Post_Types "Post Types") is "product", WordPress will look for archive-product.php.
 2.  archive.php
 3.  index.php
 
@@ -183,7 +186,7 @@ In this section we'll take a look at the Template Hierarchy in detail, and learn
 
 **Attachment Display** This template file is used to render a single attachment ("attachment" post-type) page.
 
-1.  MIME_type.php - it can be any [MIME type](http://en.wikipedia.org/wiki/Internet_media_type "http://en.wikipedia.org/wiki/Internet_media_type") (image.php, video.php, application.php). For text/plain, in order:
+1.  MIME_type.php - it can be any [MIME type](https://en.wikipedia.org/wiki/Internet_media_type "http://en.wikipedia.org/wiki/Internet_media_type") (image.php, video.php, application.php). For text/plain, in order:
     1.  text.php
     2.  plain.php
     3.  textplain.php
@@ -196,7 +199,7 @@ In this section we'll take a look at the Template Hierarchy in detail, and learn
 
 ### Filter Hierarchy
 
-The WordPress templates system allows you to filter the hierarchy. The filter (located in the [get_query_template()](http://codex.wordpress.org/Function_Reference/get_query_template "Function Reference/get query template") function) uses this filter name: "{$type}_template" where $type is the file name in the Hierarchy without the .php extension. Full list:
+The WordPress templates system allows you to filter the hierarchy. The filter (located in the [get_query_template()](https://developer.wordpress.org/reference/functions/get_query_template "Function Reference/get query template") function) uses this filter name: "{$type}_template" where $type is the file name in the Hierarchy without the .php extension. Full list:
 
 *   index_template
 *   404_template
