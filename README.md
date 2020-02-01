@@ -200,7 +200,7 @@ In this section we'll take a look at the Template Hierarchy in detail, and learn
 ### Filter Hierarchy
 
 The WordPress templates system allows you to filter the hierarchy. The filter (located in the [get_query_template()](https://developer.wordpress.org/reference/functions/get_query_template "Function Reference/get query template") function) uses this filter name: "{$type}_template" where $type is the file name in the Hierarchy without the .php extension. Full list:
-
+*
 *   index_template
 *   404_template
 *   archive_template
